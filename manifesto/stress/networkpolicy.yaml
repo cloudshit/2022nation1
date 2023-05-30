@@ -8,30 +8,31 @@ spec:
     matchLabels:
       app: stress
   policyTypes:
-    - Ingress
+    - Egress
 ---
-apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
 metadata:
-  name: allow-ingress-from-ingress-stress
+  name: allow-internet-stress
   namespace: skills
 spec:
   podSelector:
     matchLabels:
       app: stress
   policyTypes:
-    - Ingress
-  ingress:
-  - from:
+  - Egress
+  egress:
+  - to:
     - ipBlock:
-        cidr: 10.0.2.133/16
-    - ipBlock:
-        cidr: 10.0.0.147/16
-    - ipBlock:
-        cidr: 10.0.1.113/16
-    - ipBlock:
-        cidr: 10.0.2.214/16
-    - ipBlock:
-        cidr: 10.0.1.18/16
-    - ipBlock:
-        cidr: 10.0.0.35/16
+        cidr: "0.0.0.0/0"
+        except:
+        - "10.0.0.0/8"
+        - "172.16.0.0/12"
+        - "192.168.0.0/16"
+  - to:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: "kube-system"
+    - podSelector:
+        matchLabels:
+          k8s-app: "kube-dns"

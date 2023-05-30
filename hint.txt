@@ -1,0 +1,4 @@
+0. change subnet in cluster.yaml
+1. install calico
+2. change subnet & sg in ingress.yaml
+3. change vpc & cluster name in ingress controller

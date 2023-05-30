@@ -1,6 +1,7 @@
 FROM alpine
 
 RUN apk add --no-cache curl
+RUN apk add --no-cache bind-tools
 RUN apk add --no-cache libc6-compat 
 RUN adduser --disabled-password stress
 

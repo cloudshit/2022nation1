@@ -803,7 +803,7 @@ spec:
       - args:
         - --cluster-name=skills-cluster
         - --ingress-class=alb
-        - --aws-vpc-id=vpc-00432962274a82ce1
+        - --aws-vpc-id=vpc-08bbf67ee2b5a84fc
         - --aws-region=ap-northeast-2
         image: public.ecr.aws/eks/aws-load-balancer-controller:v2.4.7
         livenessProbe:

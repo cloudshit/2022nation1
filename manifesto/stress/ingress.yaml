@@ -7,12 +7,13 @@ metadata:
     alb.ingress.kubernetes.io/load-balancer-name: stress-alb
     alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/subnets: subnet-09b6d4b0c64d837d8,subnet-09aba02ab68d2e039,subnet-08e1121edf2bfa670
-    alb.ingress.kubernetes.io/security-groups: sg-03858f240bf46e233
+    alb.ingress.kubernetes.io/subnets: subnet-014b7be194aa7b8d1,subnet-046504fc156d9cee2,subnet-006af557a7a5704bb
+    alb.ingress.kubernetes.io/security-groups: sg-030f1405694207c33
     alb.ingress.kubernetes.io/target-group-attributes: deregistration_delay.timeout_seconds=0
     alb.ingress.kubernetes.io/healthcheck-path: /health
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: "5"
     alb.ingress.kubernetes.io/healthcheck-timeout-seconds: "2"
+    alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=600
     alb.ingress.kubernetes.io/healthy-threshold-count: "2"
     alb.ingress.kubernetes.io/unhealthy-threshold-count: "2"
     alb.ingress.kubernetes.io/actions.response-403: >

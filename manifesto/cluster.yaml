@@ -12,18 +12,18 @@ vpc:
   subnets:
     public:
       ap-northeast-2a:
-        id: subnet-0b466a240690b8894
+        id: subnet-09b8274e920cadb75
       ap-northeast-2b:
-        id: subnet-0de7626c131eef6ed
+        id: subnet-015691521dcfce2bf
       ap-northeast-2c:
-        id: subnet-01352bf261b11a2b9
+        id: subnet-07ec914360f6cfbfb
     private:
       ap-northeast-2a:
-        id: subnet-09b6d4b0c64d837d8
+        id: subnet-014b7be194aa7b8d1
       ap-northeast-2b:
-        id: subnet-09aba02ab68d2e039
+        id: subnet-046504fc156d9cee2
       ap-northeast-2c:
-        id: subnet-08e1121edf2bfa670
+        id: subnet-006af557a7a5704bb
 
 managedNodeGroups:
   - name: skills-app
